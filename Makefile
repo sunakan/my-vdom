@@ -6,9 +6,12 @@ bash: ## docker-compose run --rm --service-ports app bash
 	docker-compose run --rm --service-ports app bash
 
 .PHONY: nginx
-nginx: ## docker-compose run --rm --service-ports app bash
+nginx: ## docker-compose run --rm --service-ports nginx bash
 	docker-compose run --rm --service-ports nginx
 
+.PHONY: react
+react: ## docker-compose run --rm --service-ports react bash
+	docker-compose run --rm --service-ports react bash
 
 .PHONY: chown
 chown: ## sudo chown -R ${USER}:${USER} ./

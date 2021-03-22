@@ -6,6 +6,7 @@ services:
   app:
     image: node:14-slim
     working_dir: /var/local/app/myproject/
+    #command: npm start
     volumes:
       - type: bind
         source: ${PWD}/myproject/
@@ -20,3 +21,13 @@ services:
         target: /usr/share/nginx/html/
     ports:
       - 80:80
+  react:
+    image: node:14-slim
+    working_dir: /var/local/app/by-react/
+    #command: yarn start
+    volumes:
+      - type: bind
+        source: ${PWD}/by-react/
+        target: /var/local/app/by-react/
+    ports:
+      - 3000:3000
