@@ -1,0 +1,14 @@
+---
+
+version: '3.8'
+
+services:
+  app:
+    image: node:14-slim
+    working_dir: /var/local/app/myproject/
+    volumes:
+      - type: bind
+        source: ${PWD}/myproject/
+        target: /var/local/app/myproject/
+    ports:
+      - 1234:1234
