@@ -12,3 +12,11 @@ services:
         target: /var/local/app/myproject/
     ports:
       - 1234:1234
+  nginx:
+    image: nginx:stable
+    volumes:
+      - type: bind
+        source: ${PWD}/by-jquery/
+        target: /usr/share/nginx/html/
+    ports:
+      - 80:80

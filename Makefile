@@ -5,6 +5,11 @@
 bash: ## docker-compose run --rm --service-ports app bash
 	docker-compose run --rm --service-ports app bash
 
+.PHONY: nginx
+nginx: ## docker-compose run --rm --service-ports app bash
+	docker-compose run --rm --service-ports nginx
+
+
 .PHONY: chown
 chown: ## sudo chown -R ${USER}:${USER} ./
 	sudo chown -R ${USER}:${USER} ./
