@@ -10,7 +10,8 @@ services:
     volumes:
       - type: bind
         #source: ${PWD}/myproject/
-        source: ${PWD}/myproject2/
+        #source: ${PWD}/myproject2/
+        source: ${PWD}/myproject3/
         target: /var/local/app/myproject/
     ports:
       - 1234:1234
